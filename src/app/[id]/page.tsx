@@ -18,22 +18,14 @@ export default async function Photograph({ params }: PhotoId) {
     return (
         <main>
             <h2>More details about photograph with ID: {id}</h2>
-            <div
-                style={{
-                    position: "relative",
-                    height: "250px",
-                    width: "250px",
-                }}
-            >
+            <div className="relative w-60 h-60">
                 <Image
                     alt={photograph.alt}
                     fill={true}
                     quality={100}
                     sizes="40vw"
                     src={photograph.src}
-                    style={{
-                        objectFit: "contain",
-                    }}
+                    className="object-contain"
                 />
             </div>
             <p>{photograph.rating} out of 5!</p>

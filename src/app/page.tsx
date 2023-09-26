@@ -2,9 +2,9 @@ import PhotographBoard from "./components/PhotographBoard";
 
 export default function Home() {
     return (
-        <main>
-            <h2>WIP</h2>
-            <p>Once there was a page</p>
+        <main className="pt-4 px-16 pb-16">
+            <h2>Dashboard</h2>
+            <p>Here you will find some of my best work!</p>
             <PhotographBoard />
         </main>
     );

@@ -21,10 +21,15 @@ interface PhotographData {
 
 export default async function PhotographBoard() {
     const photographs = await GetPhotographs();
+
     return (
         <div className="w-fit flex flex-wrap gap-16 items-center justify-center pt-8">
             {photographs.map((data: PhotographData) => (
-                <Link href={`/${data.id}`} key={data.id}>
+                <Link
+                    href={`/${data.id}`}
+                    key={data.id}
+                    className="transition-all duration-300 hover:scale-125 hover:shadow-lg"
+                >
                     <div className="relative w-60 h-60">
                         <Image
                             alt={data.alt}
@@ -32,7 +37,7 @@ export default async function PhotographBoard() {
                             quality={100}
                             sizes="40vw"
                             src={data.src}
-                            className="object-contain"
+                            className="object-contain "
                         />
                     </div>
                 </Link>

@@ -9,7 +9,7 @@ export default function NavBar() {
                 <ul>
                     <li>
                         <Link
-                            className="p-2 border-solid border-2 rounded-lg hover:border-black cursor-pointer transition-colors duration-500"
+                            className="p-2 border-solid border-2 rounded-lg cursor-pointer hover:animate-pulse"
                             href="/"
                         >
                             Home

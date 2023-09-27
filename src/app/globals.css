@@ -34,3 +34,16 @@ h2,
 h3 {
     font-size: 2rem;
 }
+
+ul li,
+ol li {
+    margin: 8px;
+}
+
+.chips {
+    background-color: var(--foreground-rgb);
+    border-radius: 8px;
+    color: var(--background-start-rgb);
+    font-weight: 600;
+    padding: 4px 8px;
+}

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 async function GetPhotographs() {
     const URL = "http://localhost:8000";
-    const res = await fetch(`${URL}/photographs`);
+    const res = await fetch(`${URL}/photographs`, { cache: "no-store" });
     return res.json();
 }
 
@@ -17,6 +17,7 @@ interface PhotographData {
     aperture: string;
     shutter: string;
     focallength: string;
+    description: null | string;
 }
 
 export default async function PhotographBoard() {

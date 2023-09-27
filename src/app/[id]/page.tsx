@@ -5,7 +5,7 @@ import goldStar from "public/gold-star.svg";
 
 async function GetPhotographById(id: Number) {
     const URL = "http://localhost:8000";
-    const res = await fetch(`${URL}/photographs/${id}`);
+    const res = await fetch(`${URL}/photographs/${id}`, { cache: "no-store" });
     return res.json();
 }
 
@@ -21,7 +21,7 @@ export default async function Photograph({ params }: PhotoId) {
     return (
         <main className="pt-4 px-16 pb-16 flex flex-col gap-4">
             <h2>More details</h2>
-            <div className="flex flex-wrap items-start justify-around p-8">
+            <div className="flex flex-wrap items-start justify-around p-8 gap-8">
                 <div className="relative w-60 h-60">
                     <Image
                         alt={photograph.alt}
@@ -53,7 +53,7 @@ export default async function Photograph({ params }: PhotoId) {
             <div className="flex gap-2 items-center">
                 Tags:
                 <div className="flex gap-4">
-                    {photograph.tags.map((tag: String, idx: Number) => (
+                    {photograph.tags && photograph.tags.map((tag: String, idx: Number) => (
                         <p className="chips" key={`tag-${idx}`}>
                             {tag}
                         </p>

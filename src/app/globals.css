@@ -67,10 +67,38 @@ ol li {
     color: var(--tertiary);
 }
 
+form .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 50vw;
+    margin: 12px 0;
+}
+
+form .input-container input:not([type='range']),
+form .input-container select,
+form .input-container textarea {
+    padding: 4px 8px;
+}
+
+form .input-container.src input {
+    width: 5rem;
+}
+
+form .input-container select option {
+    background-color: var(--background-start-rgb);
+}
+
 form input,
 form textarea,
-form button {
+form button,
+form select {
     background-color: transparent;
     border: 1px solid var(--tertiary);
     border-radius: 8px;
+    width: fit-content;
+}
+
+form button {
+    margin-top: 16px;
 }

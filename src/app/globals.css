@@ -68,7 +68,8 @@ ol li {
 }
 
 form input,
-form textarea {
+form textarea,
+form button {
     background-color: transparent;
     border: 1px solid var(--tertiary);
     border-radius: 8px;

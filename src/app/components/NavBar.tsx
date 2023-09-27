@@ -6,13 +6,15 @@ export default function NavBar() {
         <div className="p-8">
             <nav className="flex flex-wrap items-center justify-between">
                 <h1>Photographs by Emma</h1>
-                <ul>
+                <ul className="flex">
                     <li>
-                        <Link
-                            className="p-2 border-solid border-2 rounded-lg cursor-pointer hover:animate-pulse"
-                            href="/"
-                        >
+                        <Link className="nav-bar-item" href="/">
                             Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="nav-bar-item" href="/create">
+                            Upload
                         </Link>
                     </li>
                 </ul>

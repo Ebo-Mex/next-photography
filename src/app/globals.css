@@ -13,6 +13,7 @@
         --foreground-rgb: #ffefc0;
         --background-start-rgb: #1b486b;
         --background-end-rgb: #1b486b;
+        --tertiary: #eb8e69;
     }
 }
 
@@ -30,9 +31,12 @@ h1 {
     font-size: 2.5rem;
 }
 
-h2,
-h3 {
+h2 {
     font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
 }
 
 ul li,
@@ -46,4 +50,26 @@ ol li {
     color: var(--background-start-rgb);
     font-weight: 600;
     padding: 4px 8px;
+}
+
+.nav-bar-item {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 2px solid var(--foreground-rgb);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+
+.nav-bar-item:hover {
+    border-color: var(--tertiary);
+    color: var(--tertiary);
+}
+
+form input,
+form textarea {
+    background-color: transparent;
+    border: 1px solid var(--tertiary);
+    border-radius: 8px;
 }

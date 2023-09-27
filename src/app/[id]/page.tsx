@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import DeleteButton from "../components/DeleteButton";
 import goldStar from "public/gold-star.svg";
 
 async function GetPhotographById(id: Number) {
@@ -68,6 +69,7 @@ export default async function Photograph({ params }: PhotoId) {
                     <li>Focal length: {photograph.focallength}</li>
                 </ul>
             </div>
+            <DeleteButton id={photograph.id} />
         </main>
     );
 }
